@@ -15,6 +15,7 @@ export default function handler(
       image: "/zkgiving.jpg",
       url: "https://zkgiving.org",
       stack: ["react", "typescript", "solidity"],
+      category: "live"
     },
     {
       id: 1,
@@ -24,6 +25,37 @@ export default function handler(
       image: "/taz.jpg",
       url: "https://taz.appliedzkp.org",
       stack: ["react", "next", "typescript", "solidity"],
+      category: "live"
+    },
+    {
+      id: 2,
+      name: "MXTape",
+      description:
+        "Donec ac ultricies nunc. Aliquam erat volutpat. Integer a nunc eu augue venenatis dapibus id vitae lacus. Cras ligula purus, pretium sed suscipit a, commodo vitae sapien. Mauris tempus pulvinar lectus, ac hendrerit ipsum interdum rutrum. Sed auctor a justo a sollicitudin. Integer vel dapibus risus. Etiam consequat scelerisque ipsum, vitae dictum nunc condimentum ut. Nullam bibendum venenatis eros et fringilla.",
+      image: "/taz.jpg",
+      url: "https://taz.appliedzkp.org",
+      stack: ["react", "next", "typescript", "solidity"],
+      category: "hackathon"
+    },
+    {
+      id: 3,
+      name: "Decentralized Ticket Platform",
+      description:
+        "Donec ac ultricies nunc. Aliquam erat volutpat. Integer a nunc eu augue venenatis dapibus id vitae lacus. Cras ligula purus, pretium sed suscipit a, commodo vitae sapien. Mauris tempus pulvinar lectus, ac hendrerit ipsum interdum rutrum. Sed auctor a justo a sollicitudin. Integer vel dapibus risus. Etiam consequat scelerisque ipsum, vitae dictum nunc condimentum ut. Nullam bibendum venenatis eros et fringilla.",
+      image: "/taz.jpg",
+      url: "https://taz.appliedzkp.org",
+      stack: ["react", "next", "typescript", "solidity"],
+      category: "hackathon"
+    },
+    {
+      id: 4,
+      name: "KickStark",
+      description:
+        "Donec ac ultricies nunc. Aliquam erat volutpat. Integer a nunc eu augue venenatis dapibus id vitae lacus. Cras ligula purus, pretium sed suscipit a, commodo vitae sapien. Mauris tempus pulvinar lectus, ac hendrerit ipsum interdum rutrum. Sed auctor a justo a sollicitudin. Integer vel dapibus risus. Etiam consequat scelerisque ipsum, vitae dictum nunc condimentum ut. Nullam bibendum venenatis eros et fringilla.",
+      image: "/taz.jpg",
+      url: "https://taz.appliedzkp.org",
+      stack: ["react", "next", "typescript", "solidity"],
+      category: "hackathon"
     },
   ];
 

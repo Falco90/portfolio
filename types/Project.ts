@@ -6,7 +6,8 @@ type Project = {
     description: string,
     image: string,
     url: string,
-    stack: string[]
+    stack: string[],
+    category: string
     // github: string,
 }
 

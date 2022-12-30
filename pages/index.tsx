@@ -13,10 +13,10 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <section>
+        <section id="about">
           <h2>/ About</h2>
         </section>
-        <section>
+        <section id="works">
           <h2>/ Works</h2>
           <Works />
         </section>
