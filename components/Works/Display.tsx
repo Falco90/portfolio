@@ -73,8 +73,8 @@ const Display: FC<Props> = (props) => {
               </p>
             </div>
             <p>{project.description}</p>
-            {renderIcons()}
           </div>
+            {renderIcons()}
         </div>
       ) : (
         "Loading"

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Works from "../components/Works";
+import About from "../components/About";
 import Navbar from "../components/Navbar";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <main className={styles.main}>
         <section id="about">
           <h2>/ About</h2>
+          <About />
         </section>
         <section id="works">
           <h2>/ Works</h2>
