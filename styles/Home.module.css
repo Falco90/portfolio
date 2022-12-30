@@ -36,7 +36,7 @@
 }
 
 .navbar h1 {
-  font-size: xx-large;
+  font-size: x-large;
   letter-spacing: 0.2rem;
 }
 
@@ -51,6 +51,14 @@
 .navbar li {
   padding: 0 2rem;
   cursor: pointer;
+}
+
+.navbar li::before {
+  content: '/ ';
+}
+
+.navbar li:hover::before {
+  content: '> ';
 }
 
 .projectscontainer {
