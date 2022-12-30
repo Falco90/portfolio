@@ -5,33 +5,218 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
-}
-
-.description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
   font-family: var(--font-mono);
+  color: #fff;
 }
 
-.description a {
+.main section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.description p {
-  position: relative;
-  margin: 0;
-  padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+.main section h2 {
+  font-size: x-large;
+  margin: 1rem 0;
+}
+
+.navbar {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 18rem;
+  justify-content: center;
+  border-bottom: 3px solid #fff;
+  font-family: var(--font-mono);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar h1 {
+  font-size: xx-large;
+  letter-spacing: 0.2rem;
+}
+
+.navbar ul {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+}
+
+.navbar li {
+  padding: 0 2rem;
+  cursor: pointer;
+}
+
+.projectscontainer {
+  display: flex;
+  flex-direction: row;
+  background-color: #000;
+  font-family: var(--font-mono);
+  color: #fff;
+}
+
+.projectImage {
+  animation: appear 0.5s;
+}
+
+.projectscontainer h1 {
+  font-size: x-large;
+}
+
+.display {
+  margin-top: 2rem;
+  width: 700px;
+  height: 700px;
+  background-color: rgb(56, 51, 51);
+  border-radius: 10px;
+  border: 3px rgb(94, 86, 86) solid;
+}
+
+.displayText {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.display section p {
+  animation: appear 0.1s;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.heading p {
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.heading p:hover {
+  font-size: xx-large;
+  color: magenta;
+}
+
+.iconbar {
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  animation: appear 0.5s;
+}
+
+.iconbar p {
+  margin: 0 0.5rem;
+  font-size: x-large;
+}
+
+.display h1 {
+  font-size: x-large;
+  animation: slideinH1 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.display h1::before {
+  content: '> ';
+  opacity: 1;
+  margin-right: 0;
+  color: #fff;
+}
+
+.projectlist {
+  padding: 2rem;
+}
+
+.projectlist p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.projectlist ul {
+  padding: 0.5rem;
+  width: 400px;
+  background-color: rgb(56, 51, 51);
+  color: #fff;
+  border-radius: 10px;
+  border: 3px rgb(94, 86, 86) solid;
+}
+
+.listItem {
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  transition: all 2ms;
+}
+
+.listItem:hover {
+  animation: slidein 0.5s;
+  animation-fill-mode: forwards;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.listItem::before {
+  content: '> ';
+  opacity: 0;
+  margin-right: -0.5rem;
+  transition: all .1s ease-out;
+}
+
+.listItem:hover::before {
+  content: '> ';
+  opacity: 1;
+  margin-right: 0px;
+}
+
+.activeItem {
+  background-color: #ffffff;
+  color: #000;
+  padding: 0.3rem 1rem;
+  padding-left: 2rem;
+  transition: all 2ms;
+}
+
+.activeItem::before {
+  content: '> ';
+  opacity: 1;
+  margin-right: 0;
+  color: #000;
+}
+
+
+@keyframes slidein {
+  from {
+    padding-left: 1rem;
+  }
+
+  to {
+    padding-left: 2rem;
+  }
+}
+
+@keyframes slideinH1 {
+  from {
+    padding-left: 0;
+  }
+
+  to {
+    padding-left: 1rem;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
 .code {
