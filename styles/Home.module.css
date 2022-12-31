@@ -20,8 +20,37 @@
   position: relative;
 }
 
+.about {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.aboutText {
+  width: 70%;
+}
+
 .about h1 {
   font-size: large;
+  margin-bottom: 1rem;
+}
+
+/* .bio {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+} */
+
+.bio ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.bio ul li span {
+  font-weight: bolder;
 }
 
 .main section {
@@ -43,7 +72,7 @@
   align-items: center;
   gap: 18rem;
   justify-content: space-between;
-  padding: 0.3rem 2rem;
+  padding: 0.3rem 3rem;
   /* border-bottom: 2px solid rgba(255, 255, 255, 0.76); */
   font-family: var(--font-mono);
   position: absolute;
@@ -65,7 +94,7 @@
 }
 
 .navbar li {
-  padding: 0 2rem;
+  padding-left: 3rem;
   cursor: pointer;
 }
 

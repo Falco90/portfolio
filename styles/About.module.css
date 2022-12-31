@@ -1,0 +1,15 @@
+.about {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .about section {
+    width: 50%;
+    gap: 2rem;
+  }
+  
+  .about h1 {
+    font-size: large;
+    margin-bottom: 2rem;
+  }
