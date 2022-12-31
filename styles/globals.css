@@ -92,7 +92,8 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #000;
+  background: rgb(26, 26, 26);
+  /* background: #000; */
 }
 
 a {
