@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Projects from "../components/Projects";
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
 
@@ -15,7 +16,7 @@ export default function Home() {
       case 2:
         return <About />;
       case 3:
-        return <div>Contact</div>;
+        return <Contact />;
     }
   };
 
