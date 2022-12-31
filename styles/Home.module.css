@@ -26,6 +26,7 @@
   flex-direction: row;
   gap: 4rem;
   animation: appear 1s;
+  font-size: small;
 }
 
 .aboutText {
@@ -131,11 +132,13 @@
 .projectscontainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 2rem;
   background-color: #000;
   font-family: var(--font-mono);
   color: #fff;
   animation: appear 1s;
+  height: 400px;
 }
 
 .projectImage {
@@ -145,7 +148,6 @@
 .display {
   margin-top: 2rem;
   width: 600px;
-  height: 400px;
 }
 
 .displayText {
