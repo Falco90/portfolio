@@ -1,15 +1,36 @@
 import { FC } from "react";
 import styles from "../styles/Home.module.css";
-import Link from "next/link"
 
-const Navbar: FC = () => {
+type Props = {
+  section: number;
+  setSection: Function;
+};
+
+const Navbar: FC<Props> = (props) => {
+  const { setSection, section } = props;
+
   return (
     <div className={styles.navbar}>
-        <h1>FALCO RODENBURG</h1>
+      <h1>FALCO RODENBURG</h1>
       <ul>
-        <Link href="#works"><li>Projects</li></Link>
-        <Link href="#about"><li>About</li></Link>
-        <Link href="#contact"><li>Contact</li></Link>
+        <li
+          onClick={() => setSection(1)}
+          className={section == 1 ? styles.navbarActive : styles.navbarItem}
+        >
+          Projects
+        </li>
+        <li
+          onClick={() => setSection(2)}
+          className={section == 2 ? styles.navbarActive : styles.navbarItem}
+        >
+          About
+        </li>
+        <li
+          onClick={() => setSection(3)}
+          className={section == 3 ? styles.navbarActive : styles.navbarItem}
+        >
+          Contact
+        </li>
       </ul>
     </div>
   );

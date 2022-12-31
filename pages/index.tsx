@@ -1,10 +1,24 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Works from "../components/Projects";
+import Projects from "../components/Projects";
 import About from "../components/About";
 import Navbar from "../components/Navbar";
+import { useState } from "react";
 
 export default function Home() {
+  const [section, setSection] = useState<number>(1);
+
+  const renderSection = () => {
+    switch (section) {
+      case 1:
+        return <Projects />;
+      case 2:
+        return <About />;
+      case 3:
+        return <div>Contact</div>;
+    }
+  };
+
   return (
     <>
       <Head>
@@ -14,10 +28,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
-          <Navbar />
-          <section id="works">
-            <About />
-          </section>
+          <Navbar section={section} setSection={setSection} />
+          <section>{renderSection()}</section>
         </div>
       </main>
     </>
