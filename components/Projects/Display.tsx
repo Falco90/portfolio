@@ -56,13 +56,6 @@ const Display: FC<Props> = (props) => {
     <div className={styles.display}>
       {project ? (
         <div key={project.id}>
-          <Image
-            src={project.image}
-            alt="Project logo"
-            width={700}
-            height={275}
-            className={styles.projectImage}
-          />
           <div className={styles.displayText}>
             <div className={styles.heading}>
               <h1>{project.name}</h1>{" "}
