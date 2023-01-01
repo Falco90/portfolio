@@ -126,10 +126,10 @@
 }
 
 .navbar h1 {
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+  font-size: large;
   font-weight: bold;
   color: #fff;
-  /* color: #44ffef; */
   cursor: pointer;
   transition: ease-in-out 0.1s;
 }
@@ -212,10 +212,11 @@
 .heading p {
   font-size: x-large;
   cursor: pointer;
+  color: #44ffef;
 }
 
 .heading p:hover {
-  color: #B34642;
+  color: #fff;
 }
 
 .iconbar {
@@ -238,7 +239,7 @@
   animation: slideinH1 0.5s;
   animation-fill-mode: forwards;
   color: #44ffef;
-  /* color: #f46b2f; */
+  color: #fff;
 }
 
 .display h1::before {
@@ -246,6 +247,7 @@
   opacity: 1;
   margin-right: 0;
   color: #44ffef;
+  color: #fff;
   /* color: #CC2923; */
   /* color: #f46b2f; */
   /* color: #B34642; */

@@ -11,7 +11,7 @@ const Navbar: FC<Props> = (props) => {
 
   return (
     <div className={styles.navbar}>
-      <h1 onClick={() => setSection(0)}>FALCO RODENBURG</h1>
+      <h1 onClick={() => setSection(0)}>Falco Rodenburg</h1>
       <ul>
         <li
           onClick={() => setSection(1)}
