@@ -13,3 +13,11 @@ splitText('h1', {
     ease: 'out(3)',
     delay: stagger(200),
   }));
+
+
+animate("#space", {
+  "--x": x + "%",
+  "--y": y + "%",
+  duration: 1200,
+  ease: "easeOutSine"
+});

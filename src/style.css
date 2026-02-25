@@ -1,11 +1,12 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lucinda Console", monospace;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 14px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #101626;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -29,9 +30,18 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #101626;
-  font-family: "Lucida Console", monospace;
   font-size: 14px;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px;
+  opacity: 0.05;
 }
 
 h1 {
@@ -39,6 +49,7 @@ h1 {
   font-size: 36px;
   line-height: 1.1;
   text-align: left;
+  position: fixed;
 }
 
 h2 {
@@ -94,6 +105,10 @@ section {
   align-items: center;
 }
 
+#about-text {
+  text-align: left;
+}
+
 .experience-container {
   display: flex;
   flex-direction: column;
@@ -103,9 +118,15 @@ section {
 .experience-box {
   display: flex;
   flex-direction: column;
-  background-color: rgba(120, 119, 198, 0.15);
+  background-color: rgba(120, 119, 198, 0);
   padding: 1.2rem;
   margin-bottom: 20px;
+  border-top: 1px solid rgb(120, 119, 198, 0);
+}
+
+.experience-box:hover {
+  background-color: rgb(120, 119, 198, 0.1);
+  border-top: 1px solid rgb(120, 119, 198, 0.2);
 }
 
 .experience-heading {
@@ -124,8 +145,8 @@ section {
 .language-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-end;
+  flex-wrap: wrap-reverse;
 }
 
 .language-tag {
@@ -145,6 +166,11 @@ ul {
   margin: 1rem 0 0 0;
   list-style: none;
   font-size: 14px;
+}
+
+#nav {
+  margin-top: 200px;
+  position: fixed;
 }
 
 p {
