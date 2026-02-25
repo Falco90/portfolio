@@ -31,17 +31,42 @@ body {
   min-height: 100vh;
   background-color: #101626;
   font-family: "Lucida Console", monospace;
+  font-size: 14px;
 }
 
 h1 {
   font-family: "Space Mono", monospace;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 1.1;
   text-align: left;
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+#space {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  --x: 50%;
+  --y: 50%;
+
+  background:
+    radial-gradient(circle at var(--x) var(--y),
+      rgba(120, 119, 198, 0.15),
+      transparent 40%),
+    radial-gradient(circle at 70% 30%,
+      rgba(90, 150, 255, 0.12),
+      transparent 50%),
+    radial-gradient(circle at 30% 80%,
+      rgba(200, 120, 255, 0.10),
+      transparent 50%);
+
+  filter: blur(80px) saturate(120%);
+  transform: scale(1.2);
+  /* avoids edge clipping from blur */
 }
 
 #main {
@@ -69,6 +94,47 @@ section {
   align-items: center;
 }
 
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-box {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(120, 119, 198, 0.15);
+  padding: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.experience-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.years {
+  font-weight: 800;
+}
+
+.role {}
+
+.language-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.language-tag {
+  margin-left: 10px;
+  background-color: rgba(120, 119, 198, 0.15);
+  padding: 5px 8px 5px 8px;
+  border-radius: 15px;
+}
+
 #first-name {
   color: #646cff;
 }
@@ -78,7 +144,7 @@ ul {
   padding: 0;
   margin: 1rem 0 0 0;
   list-style: none;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 p {

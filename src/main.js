@@ -1,19 +1,15 @@
-import './style.css'
-import viteLogo from '/vite.svg'
+import './style.css';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <h1>Falco Rodenburg</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import { animate, splitText, stagger } from 'animejs';
 
-setupCounter(document.querySelector('#counter'))
+splitText('h1', {
+  lines: { wrap: 'clip' },
+})
+  .addEffect(({ lines }) => animate(lines, {
+    y: [
+      { to: ['100%', '0%'] },
+    ],
+    duration: 750,
+    ease: 'out(3)',
+    delay: stagger(200),
+  }));
