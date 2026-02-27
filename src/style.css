@@ -1,12 +1,12 @@
 :root {
-  font-family: "Lucinda Console", monospace;
+  font-family: "Nunito Sans", sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 16px;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #101626;
+  color: rgba(0, 0, 0, 0.9);
+  background-color: #F5F5F5;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,7 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body::after {
@@ -45,15 +45,17 @@ body::after {
 }
 
 h1 {
-  font-family: "Space Mono", monospace;
+  font-family: "Playfair", serif;
   font-size: 36px;
+  font-weight: bolder;
   line-height: 1.1;
   text-align: left;
   position: fixed;
 }
 
 h2 {
-  font-size: 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
 }
 
 #space {
@@ -134,6 +136,7 @@ section {
   flex-direction: row;
   justify-content: flex-start;
   gap: 10px;
+  font-weight: 400;
 }
 
 .years {
@@ -150,22 +153,29 @@ section {
 }
 
 .language-tag {
+  font-family: "Nunito Sans", sans-serif;
   margin-left: 10px;
-  background-color: rgba(120, 119, 198, 0.15);
+  background-color: rgba(224, 178, 179, 0.5);
   padding: 5px 8px 5px 8px;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 
 #first-name {
-  color: #646cff;
+  color: rgb(0, 0, 0, 0.8);
 }
 
 ul {
+  font-family: "Cormorant Garamond", serif;
   text-align: left;
   padding: 0;
   margin: 1rem 0 0 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+li {
+  font-weight: 600;
 }
 
 #nav {
@@ -232,7 +242,8 @@ button:focus-visible {
   }
 
   a:hover {
-    color: #747bff;
+    color: rgb(120, 119, 198, 0.1);
+    ;
   }
 
   button {
