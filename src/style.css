@@ -5,7 +5,7 @@
   font-size: 16px;
 
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.95);
   background-color: #F5F5F5;
 
   font-synthesis: none;
@@ -38,10 +38,11 @@ body::after {
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: -1;
 
   background-image: radial-gradient(white 1px, transparent 1px);
   background-size: 3px 3px;
-  opacity: 0.05;
+  opacity: 0.15;
 }
 
 h1 {
@@ -51,6 +52,7 @@ h1 {
   line-height: 1.1;
   text-align: left;
   position: fixed;
+  border-bottom: black 2px solid;
 }
 
 h2 {
@@ -63,23 +65,19 @@ h2 {
   inset: 0;
   z-index: -1;
 
-  --x: 50%;
-  --y: 50%;
-
   background:
-    radial-gradient(circle at var(--x) var(--y),
-      rgba(120, 119, 198, 0.15),
+    radial-gradient(circle at 50% 50%,
+      rgba(120, 119, 198, 0.22),
       transparent 40%),
     radial-gradient(circle at 70% 30%,
-      rgba(90, 150, 255, 0.12),
+      rgba(90, 150, 255, 0.15),
       transparent 50%),
     radial-gradient(circle at 30% 80%,
-      rgba(200, 120, 255, 0.10),
+      rgba(200, 120, 255, 0.18),
       transparent 50%);
 
   filter: blur(80px) saturate(120%);
   transform: scale(1.2);
-  /* avoids edge clipping from blur */
 }
 
 #main {
@@ -181,6 +179,14 @@ section {
   justify-content: flex-start;
   gap: 10px;
   font-weight: 400;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #first-name {
