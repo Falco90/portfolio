@@ -14,9 +14,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
 a {
   font-weight: 500;
-  text-decoration: inherit;
+  color: rgba(0, 0, 0, 0.95);
 }
 
 a:hover {
@@ -58,6 +65,12 @@ h1 {
 h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-link {
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #space {
@@ -122,11 +135,13 @@ section {
   padding: 1.2rem;
   margin-bottom: 20px;
   border-top: 1px solid rgb(120, 119, 198, 0);
+  border-radius: 5px;
 }
 
 .experience-box:hover {
   background-color: rgb(120, 119, 198, 0.1);
   border-top: 1px solid rgb(120, 119, 198, 0.2);
+  cursor: pointer;
 }
 
 .experience-heading {
@@ -166,11 +181,13 @@ section {
   padding: 1.2rem;
   margin-bottom: 20px;
   border-top: 1px solid rgb(120, 119, 198, 0);
+  border-radius: 5px;
 }
 
 .project-box:hover {
   background-color: rgba(132, 191, 180, 0.1);
   border-top: 1px solid rgb(132, 191, 180, 0.2);
+  cursor: pointer;
 }
 
 .project-heading {
