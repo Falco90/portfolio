@@ -34,3 +34,30 @@ document.getElementById("nav").addEventListener("click", (e) => {
     });
   }
 });
+
+
+const sections = ["about", "experience", "projects", "contact"];
+const navLinks = document.querySelectorAll("#nav a");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const id = entry.target.id;
+
+    navLinks.forEach(link => {
+      link.classList.toggle(
+        "active",
+        link.dataset.target === id
+      );
+    });
+  });
+}, {
+  threshold: 0.6
+});
+
+// Observe each section
+sections.forEach(id => {
+  const section = document.getElementById(id);
+  if (section) observer.observe(section);
+});
