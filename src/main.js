@@ -14,10 +14,23 @@ splitText('h1', {
     delay: stagger(200),
   }));
 
+document.getElementById("nav").addEventListener("click", (e) => {
+  console.log("clicked");
+  const link = e.target.closest("a");
 
-animate("#space", {
-  "--x": x + "%",
-  "--y": y + "%",
-  duration: 1200,
-  ease: "easeOutSine"
+  if (!link) return;
+
+  const targetId = link.dataset.target;
+  if (!targetId) return;
+
+  if (targetId == "about") {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  } else {
+    document.getElementById(targetId).scrollIntoView({
+      behavior: "smooth"
+    });
+  }
 });
