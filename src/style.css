@@ -5,8 +5,8 @@
   font-size: 16px;
 
   color-scheme: light dark;
-  color: rgba(0, 0, 0, 0.95);
-  background-color: #F5F5F5;
+  color: black;
+  background-color: #f7f6f2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,37 +23,38 @@ a:active {
 
 #nav a {
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.95);
+  transition: letter-spacing 0.6s ease;
 }
 
 #nav a:hover {
-  color: #535bf2;
+  letter-spacing: 0.05em;
   cursor: pointer;
 }
 
 #nav a.active {
-  color: #535bf2;
+  letter-spacing: 0.05em;
+  font-weight: 900;
 }
 
+html,
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  font-size: 16px;
+  padding: 0;
+  height: 100%;
+  background: #f6f4ef;
 }
 
-body::after {
-  content: "";
+#main {
   position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 3px 3px;
-  opacity: 0.15;
+  inset: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 4rem 4rem 0 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
 h1 {
@@ -63,7 +64,7 @@ h1 {
   line-height: 1.1;
   text-align: left;
   position: fixed;
-  border-bottom: black 2px solid;
+  border-bottom: 2px solid black;
 }
 
 h2 {
@@ -72,53 +73,30 @@ h2 {
   font-weight: 600;
 }
 
+p {
+  line-height: 1.7;
+  font-weight: 300;
+}
+
 .experience-link {
   margin-left: auto;
   color: rgba(0, 0, 0, 0.7);
 }
 
-#space {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  background:
-    radial-gradient(circle at 50% 50%,
-      rgba(120, 119, 198, 0.22),
-      transparent 40%),
-    radial-gradient(circle at 70% 30%,
-      rgba(90, 150, 255, 0.15),
-      transparent 50%),
-    radial-gradient(circle at 30% 80%,
-      rgba(200, 120, 255, 0.18),
-      transparent 50%);
-
-  filter: blur(80px) saturate(120%);
-  transform: scale(1.2);
-}
-
-#main {
-  width: 100vw;
-  height: 100vh;
-  margin: 0 auto;
-  padding: 4rem 4rem 0 4rem;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-}
-
 section {
   height: 100%;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 #title-nav {
+  width: 50%;
   align-items: start;
 }
 
 #content {
+  width: 50%;
   align-items: center;
 }
 
@@ -143,8 +121,6 @@ section {
 }
 
 .experience-box:hover {
-  background-color: rgb(120, 119, 198, 0.1);
-  border-top: 1px solid rgb(120, 119, 198, 0.2);
   cursor: pointer;
 }
 
@@ -156,11 +132,13 @@ section {
   font-weight: 400;
 }
 
-.years {
-  font-weight: 800;
+.experience-heading p {
+  font-weight: 500;
 }
 
-.role {}
+.years p {
+  font-weight: 800;
+}
 
 .language-container {
   display: flex;
@@ -172,26 +150,15 @@ section {
 .language-tag {
   font-family: "Nunito Sans", sans-serif;
   margin-left: 10px;
-  background-color: rgba(224, 178, 179, 0.5);
   padding: 5px 8px 5px 8px;
-  border-radius: 5px;
   font-size: 12px;
 }
 
 .project-box {
-  background-color: rgba(132, 191, 180, 0);
   display: flex;
   flex-direction: column;
   padding: 1.2rem;
   margin-bottom: 20px;
-  border-top: 1px solid rgb(120, 119, 198, 0);
-  border-radius: 5px;
-}
-
-.project-box:hover {
-  background-color: rgba(132, 191, 180, 0.1);
-  border-top: 1px solid rgb(132, 191, 180, 0.2);
-  cursor: pointer;
 }
 
 .project-heading {
@@ -199,7 +166,10 @@ section {
   flex-direction: row;
   justify-content: flex-start;
   gap: 10px;
-  font-weight: 400;
+}
+
+.project-heading p {
+  font-weight: 500;
 }
 
 .project-links {
@@ -208,10 +178,6 @@ section {
   gap: 10px;
   margin-left: auto;
   color: rgba(0, 0, 0, 0.7);
-}
-
-#first-name {
-  color: rgb(0, 0, 0, 0.8);
 }
 
 ul {
@@ -241,48 +207,8 @@ li {
   margin: 2rem 0 2rem 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#contact {
+  padding-bottom: 50px;
 }
 
 @media (prefers-color-scheme: light) {

@@ -24,7 +24,7 @@ document.getElementById("nav").addEventListener("click", (e) => {
   if (!targetId) return;
 
   if (targetId == "about") {
-    window.scrollTo({
+    document.getElementById("main").scrollTo({
       top: 0,
       behavior: "smooth"
     });
@@ -39,11 +39,16 @@ document.getElementById("nav").addEventListener("click", (e) => {
 const sections = ["about", "experience", "projects", "contact"];
 const navLinks = document.querySelectorAll("#nav a");
 
+let currentSection = null;
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
 
     const id = entry.target.id;
+    if (id === currentSection) return;
+
+    currentSection = id;
 
     navLinks.forEach(link => {
       link.classList.toggle(
@@ -51,6 +56,8 @@ const observer = new IntersectionObserver((entries) => {
         link.dataset.target === id
       );
     });
+
+    animateBloom(id);
   });
 }, {
   threshold: 0.6
