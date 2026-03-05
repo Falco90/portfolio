@@ -55,15 +55,16 @@ body {
   text-align: center;
   display: flex;
   flex-direction: row;
+  scrollbar-width: none;
 }
 
 h1 {
+  margin: 0;
   font-family: "Playfair", serif;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: bolder;
   line-height: 1.1;
   text-align: left;
-  position: fixed;
   border-bottom: 2px solid black;
 }
 
@@ -95,9 +96,20 @@ section {
   align-items: start;
 }
 
+#title-role {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#title-role p {
+  margin: 0;
+}
+
 #content {
   width: 50%;
-  align-items: center;
+  min-height: 100%;
 }
 
 #about-text {
@@ -140,6 +152,66 @@ section {
   font-weight: 800;
 }
 
+.content-section {
+  margin-bottom: 30px;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-item:first-child {
+  border-top: none;
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 30px 0;
+}
+
+.accordion-title {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Playfair", serif;
+  font-size: 32px;
+  line-height: 1.2;
+  color: black;
+  cursor: pointer;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.accordion-title:hover {
+  opacity: 0.6;
+}
+
+.accordion-content {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 400ms ease, opacity 300ms ease;
+}
+
+.accordion-content p {
+  margin-top: 20px;
+  max-width: 60ch;
+  line-height: 1.7;
+}
+
+.accordion-item.active .project-title {
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 500ms ease;
+}
+
+
+.accordion-item.active .accordion-content {
+  opacity: 1;
+}
+
 .language-container {
   display: flex;
   flex-direction: row;
@@ -154,18 +226,11 @@ section {
   font-size: 12px;
 }
 
-.project-box {
-  display: flex;
-  flex-direction: column;
-  padding: 1.2rem;
-  margin-bottom: 20px;
-}
-
 .project-heading {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 10px;
+  align-items: center;
 }
 
 .project-heading p {

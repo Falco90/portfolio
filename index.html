@@ -15,7 +15,10 @@
 <body>
   <div id="main">
     <section id="title-nav">
-      <h1><span id="first-name">FALCO</span><br>RODENBURG</h1>
+      <div id="title-role">
+        <h1><span id="first-name">FALCO</span><br>RODENBURG</h1>
+        <p>Full-Stack Software Developer</p>
+      </div>
       <ul id="nav">
         <li><a data-target="about"><b>&#x2022; </b>ABOUT</a></li>
         <li><a data-target="experience"><b>&#x2022; </b>EXPERIENCE</a></li>
@@ -24,8 +27,7 @@
       </ul>
     </section>
     <section id="content">
-      <div id="about">
-        <h2>ABOUT</h2>
+      <div class="content-section" id="about">
         <p id="about-text">Hi, I'm Falco a software developer from The Netherlands. Coming originally from the
           Psychology
           field, I learned
@@ -52,8 +54,7 @@
           Since 2022 I'm based in Thailand where I live with my wife, and help running a meditation center.
         </p>
       </div>
-      <div id="experience">
-        <h2>EXPERIENCE</h2>
+      <div class="content-section" id="experience">
         <div id="experience-container">
           <div class="experience-box">
             <div class="experience-heading">
@@ -63,7 +64,6 @@
               <p class="company">Freelance</p>
               <p>&#x2022;</p>
               <p class="location">Nonthaburi, Thailand (remote)</p>
-              <i class="experience-link fa-arrow-up-right-from-square fa-solid"></i>
             </div>
             <p class="experience-text">
               I worked on various projects, most notably a project for the Dutch Government where I did full-stack
@@ -96,7 +96,6 @@
               <p class="company">IBM Benelux</p>
               <p>&#x2022;</p>
               <p class="location">Groningen, The Netherlands</p>
-              <i class="experience-link fa-arrow-up-right-from-square fa-solid"></i>
             </div>
             <p class="experience-text">
               I worked on various projects, most notably a project for the Dutch Government where I did full-stack
@@ -119,88 +118,149 @@
           </div>
         </div>
       </div>
-      <div id="projects">
-        <h2>PROJECTS</h2>
-        <div class="project-container">
-          <div class="project-box">
-            <div class="project-heading">
-              <p class="project-title">TAZ The Anonymous Zone</p>
-              <p>&#x2022;</p>
-              <p class="project-organisation">Ethereum Foundation</p>
-              <div class="project-links">
-                <i class="fa-solid fa-code"></i>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      <div class="content-section" id="projects">
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-title">
+              <span class="project-title">Temporary Anonymous Zone</span>
+            </button>
+            <div class="accordion-content">
+              <p class="project-text">I worked on various projects, most notably a project for the Dutch Government
+                where
+                I
+                did full-stack engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+              </p>
+              <div class="language-container">
+                <p class="language-tag">TypeScript</p>
+                <p class="language-tag">HTML</p>
+                <p class="language-tag">CSS</p>
+                <p class="language-tag">React</p>
+                <p class="language-tag">NextJS</p>
               </div>
-            </div>
-            <p class="project-text">I worked on various projects, most notably a project for the Dutch Government where
-              I
-              did full-stack engineering in Java
-              I worked on various projects, most notably a project for the Dutch Government where I did full-stack
-              engineering in Java
-              I worked on various projects, most notably a project for the Dutch Government where I did full-stack
-              engineering in Java
-
-            </p>
-            <div class="language-container">
-              <p class="language-tag">TypeScript</p>
-              <p class="language-tag">HTML</p>
-              <p class="language-tag">CSS</p>
             </div>
           </div>
-          <div class="project-box">
-            <div class="project-heading">
-              <p class="project-title">Zuzalu App</p>
-              <p>&#x2022;</p>
-              <p class="project-organisation">Ethereum Foundation</p>
-              <div class="project-links">
-                <i class="fa-solid fa-code"></i>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              <span class="project-title">Zuzalu App</span>
+            </button>
+            <div class="accordion-content">
+              <p class="project-text">I worked on various projects, most notably a project for the Dutch Government
+                where
+                I
+                did full-stack engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+              </p>
+              <div class="language-container">
+                <p class="language-tag">TypeScript</p>
+                <p class="language-tag">HTML</p>
+                <p class="language-tag">CSS</p>
+                <p class="language-tag">React</p>
+                <p class="language-tag">NextJS</p>
               </div>
-            </div>
-            <p class="project-text">I worked on various projects, most notably a project for the Dutch Government where
-              I
-              did full-stack engineering in Java
-              I worked on various projects, most notably a project for the Dutch Government where I did full-stack
-              engineering in Java
-              I worked on various projects, most notably a project for the Dutch Government where I did full-stack
-              engineering in Java
-
-            </p>
-            <div class="language-container">
-              <p class="language-tag">TypeScript</p>
-              <p class="language-tag">HTML</p>
-              <p class="language-tag">CSS</p>
             </div>
           </div>
-          <div class="project-box">
-            <div class="project-heading">
-              <p class="project-title">ZK Giving</p>
-              <p>&#x2022;</p>
-              <p class="project-organisation">Aztec Foundation</p>
-              <div class="project-links">
-                <i class="fa-solid fa-code"></i>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              <span class="project-title">ZK Giving</span>
+            </button>
+            <div class="accordion-content">
+              <p class="project-text">I worked on various projects, most notably a project for the Dutch Government
+                where
+                I
+                did full-stack engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+              </p>
+              <div class="language-container">
+                <p class="language-tag">TypeScript</p>
+                <p class="language-tag">HTML</p>
+                <p class="language-tag">CSS</p>
+                <p class="language-tag">React</p>
+                <p class="language-tag">NextJS</p>
               </div>
             </div>
-            <p class="project-text">I worked on various projects, most notably a project for the Dutch Government where
-              I
-              did full-stack engineering in Java
-              I worked on various projects, most notably a project for the Dutch Government where I did full-stack
-              engineering in Java
-              I worked on various projects, most notably a project for the Dutch Government where I did full-stack
-              engineering in Java
-
-            </p>
-            <div class="language-container">
-              <p class="language-tag">TypeScript</p>
-              <p class="language-tag">HTML</p>
-              <p class="language-tag">CSS</p>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              <span class="project-title">Zuzalu App</span>
+            </button>
+            <div class="accordion-content">
+              <p class="project-text">I worked on various projects, most notably a project for the Dutch Government
+                where
+                I
+                did full-stack engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+              </p>
+              <div class="language-container">
+                <p class="language-tag">TypeScript</p>
+                <p class="language-tag">HTML</p>
+                <p class="language-tag">CSS</p>
+                <p class="language-tag">React</p>
+                <p class="language-tag">NextJS</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              <span class="project-title">HyperTui</span>
+            </button>
+            <div class="accordion-content">
+              <p class="project-text">I worked on various projects, most notably a project for the Dutch Government
+                where
+                I
+                did full-stack engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+              </p>
+              <div class="language-container">
+                <p class="language-tag">TypeScript</p>
+                <p class="language-tag">HTML</p>
+                <p class="language-tag">CSS</p>
+                <p class="language-tag">React</p>
+                <p class="language-tag">NextJS</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-title">
+              <span class="project-title">Aranya</span>
+            </button>
+            <div class="accordion-content">
+              <p class="project-text">I worked on various projects, most notably a project for the Dutch Government
+                where
+                I
+                did full-stack engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+                I worked on various projects, most notably a project for the Dutch Government where I did full-stack
+                engineering in Java
+              </p>
+              <div class="language-container">
+                <p class="language-tag">TypeScript</p>
+                <p class="language-tag">HTML</p>
+                <p class="language-tag">CSS</p>
+                <p class="language-tag">React</p>
+                <p class="language-tag">NextJS</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="contact">
-        <h2>CONTACT</h2>
+      <div class="content-section" id="contact">
         <div id="contact-box">
           <p class="contact-text">
             If would like to get in touch you could write me an email or add me on linkedin. Also check out my github!
