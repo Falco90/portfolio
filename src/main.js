@@ -18,36 +18,49 @@ const items = document.querySelectorAll(".accordion-item");
 
 items.forEach(item => {
   const button = item.querySelector(".accordion-title");
-  const title = item.querySelector((".project-title"));
-  const content = item.querySelector(".accordion-content");
-
   button.addEventListener("click", () => {
 
-    const isOpen = item.classList.contains("active");
+    const currentActiveItem = document.querySelector(".accordion-item.active");
 
-    // Close all
-    items.forEach(i => {
-      title.style.transform = `translateX(0)`;
-      i.classList.remove("active");
-      const c = i.querySelector(".accordion-content");
-      c.style.height = "0px";
-    });
-
-    const containerWidth = button.offsetWidth;
-    const textWidth = title.offsetWidth;
-
-    const distance = containerWidth - textWidth;
-
-    title.style.transform = `translateX(-${distance}px)`;
-    // If it was closed, open it
-    if (!isOpen) {
-      item.classList.add("active");
-      content.style.height = content.scrollHeight + "px";
+    if (item == currentActiveItem) {
+      closeItem(item);
+      return;
     }
 
+    if (currentActiveItem) {
+      closeItem(currentActiveItem);
 
+      setTimeout(() => {
+        openItem(item);
+      }, 500);
+    } else {
+      openItem(item);
+    }
   });
 });
+
+function openItem(item) {
+  const button = item.querySelector(".accordion-title");
+  const title = item.querySelector(".project-title");
+  const content = item.querySelector(".accordion-content");
+
+  const containerWidth = button.offsetWidth;
+  const textWidth = item.querySelector(".project-title").offsetWidth;
+  const distance = containerWidth - textWidth;
+
+  title.style.transform = `translateX(-${distance}px)`;
+  content.style.height = content.scrollHeight + "px";
+  item.classList.add("active");
+}
+
+function closeItem(item) {
+  const title = item.querySelector(".project-title");
+  const content = item.querySelector(".accordion-content");
+
+  title.style.transform = "translateX(0)";
+  content.style.height = "0px";
+  item.classList.remove("active");
+}
 
 document.getElementById("nav").addEventListener("click", (e) => {
   console.log("clicked");
