@@ -57,16 +57,25 @@ function closeItem(item) {
   item.classList.remove("active");
 }
 
-document.getElementById("nav").addEventListener("click", (e) => {
-  console.log("clicked");
-  const link = e.target.closest("a");
+const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = ["about", "experience", "projects", "contact"];
 
+let currentSection = null;
+
+nav.addEventListener("click", (e) => {
+  const link = e.target.closest("a");
   if (!link) return;
 
   const targetId = link.dataset.target;
   if (!targetId) return;
 
-  if (targetId == "about") {
+  navLinks.forEach(l => l.classList.remove("active"));
+  link.classList.add("active");
+
+  currentSection = targetId;
+
+  if (targetId === "about") {
     document.getElementById("main").scrollTo({
       top: 0,
       behavior: "smooth"
@@ -78,19 +87,14 @@ document.getElementById("nav").addEventListener("click", (e) => {
   }
 });
 
-
-const sections = ["about", "experience", "projects", "contact"];
-const navLinks = document.querySelectorAll("#nav a");
-
-let currentSection = null;
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
+
     if (!entry.isIntersecting) return;
 
     const id = entry.target.id;
-    if (id === currentSection) return;
 
+    if (id === currentSection) return;
     currentSection = id;
 
     navLinks.forEach(link => {
@@ -104,6 +108,7 @@ const observer = new IntersectionObserver((entries) => {
 }, {
   threshold: 0.6
 });
+
 
 sections.forEach(id => {
   const section = document.getElementById(id);
