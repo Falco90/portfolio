@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const items = document.querySelectorAll(".accordion-item");
 
 items.forEach(item => {
-  const button = item.querySelector(".accordion-title");
-  button.addEventListener("click", () => {
+  item.addEventListener("click", () => {
 
     const currentActiveItem = document.querySelector(".accordion-item.active");
 
@@ -43,8 +42,9 @@ function openItem(item) {
   const distance = containerWidth - textWidth;
 
   title.style.transform = `translateX(-${distance}px)`;
-  content.style.height = content.scrollHeight + "px";
+  const height = content.scrollHeight;
   item.classList.add("active");
+  content.style.height = height + "px";
 }
 
 function closeItem(item) {
@@ -53,6 +53,7 @@ function closeItem(item) {
 
   title.style.transform = "translateX(0)";
   content.style.height = "0px";
+
   item.classList.remove("active");
 }
 
@@ -99,13 +100,11 @@ const observer = new IntersectionObserver((entries) => {
       );
     });
 
-    animateBloom(id);
   });
 }, {
   threshold: 0.6
 });
 
-// Observe each section
 sections.forEach(id => {
   const section = document.getElementById(id);
   if (section) observer.observe(section);
