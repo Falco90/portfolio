@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const initialActiveItem = document.querySelector(".accordion-item.active");
 
   if (initialActiveItem) {
-    openItem(initialActiveItem)
+    openItem(initialActiveItem);
+    updateAccordionState();
   }
 });
 
+const accordion = document.querySelector(".accordion");
 const items = document.querySelectorAll(".accordion-item");
 
 items.forEach(item => {
@@ -15,8 +17,9 @@ items.forEach(item => {
 
     const currentActiveItem = document.querySelector(".accordion-item.active");
 
-    if (item == currentActiveItem) {
+    if (item === currentActiveItem) {
       closeItem(item);
+      updateAccordionState();
       return;
     }
 
@@ -25,9 +28,11 @@ items.forEach(item => {
 
       setTimeout(() => {
         openItem(item);
+        updateAccordionState();
       }, 500);
     } else {
       openItem(item);
+      updateAccordionState();
     }
   });
 });
@@ -38,10 +43,11 @@ function openItem(item) {
   const content = item.querySelector(".accordion-content");
 
   const containerWidth = button.offsetWidth;
-  const textWidth = item.querySelector(".project-title").offsetWidth;
+  const textWidth = title.offsetWidth;
   const distance = containerWidth - textWidth;
 
   title.style.transform = `translateX(-${distance}px)`;
+
   const height = content.scrollHeight;
   item.classList.add("active");
   content.style.height = height + "px";
@@ -55,6 +61,16 @@ function closeItem(item) {
   content.style.height = "0px";
 
   item.classList.remove("active");
+}
+
+function updateAccordionState() {
+  const activeItem = document.querySelector(".accordion-item.active");
+
+  if (activeItem) {
+    accordion.classList.add("has-active");
+  } else {
+    accordion.classList.remove("has-active");
+  }
 }
 
 const nav = document.querySelector("nav");
