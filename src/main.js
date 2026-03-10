@@ -38,17 +38,21 @@ items.forEach(item => {
 });
 
 function openItem(item) {
+
   const button = item.querySelector(".accordion-title");
   const title = item.querySelector(".project-title");
   const content = item.querySelector(".accordion-content");
 
-  const containerWidth = button.offsetWidth;
-  const textWidth = title.offsetWidth;
-  const distance = containerWidth - textWidth;
+  if (window.innerWidth > 700) {
+    const containerWidth = button.offsetWidth;
+    const textWidth = title.offsetWidth;
+    const distance = containerWidth - textWidth;
 
-  title.style.transform = `translateX(-${distance}px)`;
+    title.style.transform = `translateX(-${distance}px)`;
+  }
 
   const height = content.scrollHeight;
+
   item.classList.add("active");
   content.style.height = height + "px";
 }
@@ -129,4 +133,12 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(id => {
   const section = document.getElementById(id);
   if (section) observer.observe(section);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 700) {
+    document.querySelectorAll(".project-title").forEach(title => {
+      title.style.transform = "translateX(0)";
+    });
+  }
 });
