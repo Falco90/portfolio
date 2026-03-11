@@ -1,5 +1,3 @@
-import './style.css';
-
 document.addEventListener("DOMContentLoaded", () => {
   const initialActiveItem = document.querySelector(".accordion-item.active");
 
