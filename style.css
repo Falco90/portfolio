@@ -544,6 +544,7 @@ section {
 
 .project-link {
   color: var(--color-accent);
+  letter-spacing: 0.02em;
 }
 
 .arrow {
