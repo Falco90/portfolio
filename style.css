@@ -84,6 +84,8 @@ a:active {
 
 .project-image {
   background: var(--accent-soft);
+  height: 200px;
+  overflow: hidden;
   padding: 5px;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
@@ -101,8 +103,6 @@ a:active {
 }
 
 .project-image img {
-  width: 100%;
-  display: block;
   border-radius: 10px;
 }
 
@@ -125,7 +125,7 @@ body::before {
   position: fixed;
   inset: 0;
 
-  background-image: url("/noise_200.png");
+  background-image: url("/public/noise_200.png");
   background-repeat: repeat;
 
   opacity: 0.03;
@@ -578,16 +578,19 @@ li {
   color: var(--color-secondary-accent);
 }
 
+#contact-icons-container a {
+  text-decoration: none;
+}
+
 #contact {
   padding-bottom: 50px;
 }
 
 #footer {
-  font-family: "Playfair Display", serif;
   color: var(--color-heading);
   opacity: 0.5;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 @media (max-width: 1000px) {
