@@ -142,3 +142,11 @@ window.addEventListener("resize", () => {
     });
   }
 });
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    nav.classList.add("is-sticky");
+  } else {
+    nav.classList.remove("is-sticky");
+  }
+});
