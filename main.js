@@ -143,10 +143,17 @@ window.addEventListener("resize", () => {
   }
 });
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    nav.classList.add("is-sticky");
-  } else {
-    nav.classList.remove("is-sticky");
-  }
+const sentinels = document.querySelectorAll(".heading-sentinel");
+
+sentinels.forEach((sentinel) => {
+  const heading = sentinel.nextElementSibling;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      heading.classList.toggle("stuck", !entry.isIntersecting);
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(sentinel);
 });
