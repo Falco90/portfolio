@@ -327,9 +327,17 @@ section {
   letter-spacing: 0.2px;
 }
 
-.about-text p {
+#about-text p {
   max-width: 65ch;
-  line-height: 1.65;
+}
+
+#content a {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+#content a:hover {
+  color: var(--color-secondary-accent);
 }
 
 .profile-image {
