@@ -342,11 +342,13 @@ section {
 
 .profile-image {
   position: relative;
-  width: 95px;
-  height: 95px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   object-position: 40% 20%;
+
+  margin-top: 8px;
 
   float: left;
   margin-right: 14px;
@@ -849,13 +851,14 @@ p {
   }
 
   .years::after {
+    top: 8px;
     left: -17px;
     right: auto;
     transform: translateX(-50%);
   }
 
   .experience-box:hover .years::after {
-    transform: translateX(-50%) scale(1.4);
+    transform: translateX(-50%) scale(1.2);
   }
 
   .experience-box::before,
@@ -914,10 +917,9 @@ p {
 }
 
 @media (max-width: 600px) {
-  profile-image {
-    width: 85px;
-    height: 85px;
-    float: right;
+  .profile-image {
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -940,8 +942,7 @@ p {
 @media (hover: none) {
 
   .experience-box:hover::before,
-  .experience-box:hover::after,
-  .experience-box:hover .years::after {
+  .experience-box:hover::after {
     display: none;
   }
 
