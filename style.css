@@ -456,7 +456,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 8px;
 }
 
 .experience-heading p {
@@ -941,7 +941,6 @@ p {
 
 @media (hover: none) {
 
-  .experience-box:hover::before,
   .experience-box:hover::after {
     display: none;
   }
