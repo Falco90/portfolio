@@ -336,7 +336,7 @@ section {
   font-weight: 400;
 }
 
-#content a:hover {
+#content a:not(.project-link):hover {
   color: var(--color-secondary-accent);
 }
 
@@ -912,6 +912,10 @@ p {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+  }
+
+  .language-container {
+    gap: 8px 6px;
   }
 
 }
