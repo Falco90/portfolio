@@ -237,6 +237,7 @@ p {
 }
 
 #experience-container {
+  margin-top: 30px;
   position: relative;
 }
 
@@ -321,7 +322,7 @@ section {
 }
 
 #about {
-  padding-bottom: 30vh;
+  padding-bottom: 25vh;
 }
 
 #about-text {
