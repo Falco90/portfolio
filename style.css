@@ -540,6 +540,11 @@ section {
   transition: opacity 250ms ease;
 }
 
+.accordion.has-active .accordion-item:hover .accordion-title {
+  opacity: 1;
+  transition: opacity 350ms ease;
+}
+
 .accordion.has-active .accordion-item.active .accordion-title {
   opacity: 1;
 }
