@@ -752,6 +752,10 @@ p {
     display: none;
   }
 
+  #about {
+    padding-bottom: 80px;
+  }
+
   #main {
     position: relative;
     inset: auto;
